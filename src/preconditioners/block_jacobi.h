@@ -22,7 +22,7 @@
 #include <cplm_v0_timing.h>
 #include <cplm_matcsr.h>
 #include <cplm_matdense.h>
-#include <cplm_v0_kernels.h>
+#include <cplm_kernels.h>
 #include <cplm_v0_ivector.h>
 /* MKL */
 #include <mkl_pardiso.h>
