@@ -58,5 +58,11 @@ dkms.conf
 *.toc
 *.bbl
 
+#emacs aux or tmp files
+*~
+\#*\#
+.\#*
+
 #other
 *.swp
+./make.lib.inc
