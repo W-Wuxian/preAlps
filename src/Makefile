@@ -2,14 +2,17 @@ include ../make.inc
 
 PREC_DIR=preconditioners
 SOLVER_DIR=solvers
+BGMRESMDR_DIR=solvers
 PRECONDITIONERS_SRC = $(PREC_DIR)/block_jacobi.c \
-			 $(PREC_DIR)/preAlps_preconditioner.c\
+			 $(PREC_DIR)/preAlps_preconditioner.c \
 			 $(PREC_DIR)/lorasc.c \
 			 $(PREC_DIR)/lorasc_eigsolve.c \
 			# $(PREC_DIR)/presc.c \
 			# $(PREC_DIR)/presc_eigsolve.c
 
-SOLVERS_SRC = $(SOLVER_DIR)/ecg.c
+SOLVERS_SRC = $(SOLVER_DIR)/ecg.c \
+		$(SOLVER_DIR)/utilities.c \
+		$(SOLVER_DIR)/BGMRESMDR.c
 
 PRECONDITIONERS_OBJ = $(PRECONDITIONERS_SRC:.c=.o)
 SOLVERS_OBJ = $(SOLVERS_SRC:.c=.o)
